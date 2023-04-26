@@ -1,0 +1,26 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+/* style untuk body */
+body {
+    overflow-x: hidden;
+}
+
+/* style animasi untuk class 'section' */
+.section {
+    transform: translateX(400%);
+    transition: transform 1s ease;
+}
+.section:nth-of-type(even){
+    transform: translateX(-400%);
+}
+.section.show {
+    transform: translateX(0%);
+}
+
+.no-decoration {
+    text-decoration: none;
+}

@@ -1,0 +1,15 @@
+/* style untuk bagian body */
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+/* style untuk animasi kontak */
+.animate {
+    transform: scale(0.1);
+    transition: transform 1s ease;
+}
+.animate.show {
+    transform: scale(1);
+}
