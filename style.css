@@ -7,7 +7,6 @@
 /* CSS untuk navigasi */
 .navbar {
   position: relative;
-  background-color: var(--body-color);
   box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
 }
 
@@ -26,7 +25,7 @@
 }
 
 .navbar-nav {
-  margin-right: 100px;
+  margin-right: 30px;
 }
 
 .nav-link {
@@ -38,11 +37,6 @@
   color: #012d80;
 }
 
-/* CSS untuk menu toggle */
-.navbar-toggler-icon {
-  color: #fff;
-}
-
 /* Ikon dark mode */
 .change-theme{
   padding: 10px;
@@ -51,96 +45,13 @@
 }
 /* Tutup Ikon dark mode */
 
-.carousel-item img {
-  max-height: 80vh;
-  margin: auto;
-}
-
-h3{
-  color: #012d80;
-}
-
 .jumbotron {
   padding-top: 3rem;
   background-color: #0d6efd;
   margin-top: 50px;
 }
 
-/* CSS untuk media query */
-@media (max-width: 992px) {
-  .navbar-brand {
-    margin-left: 45vh;
-  }
-  
-  .navbar-nav {
-    margin-right: 0;
-  }
-  
-  .nav-link {
-    font-size: 1rem;
-  }
-  
-}
-
 /* menyembuyikan keranjang */
 .container {
   display: none;
-}
-
-/* .tr-2{
-  display: none;
-}
-.tr-3{
-  display: none;
-}
-.tr-4{
-  display: none;
-}
-.tr-5{
-  display: none;
-}
-.tr-6{
-  display: none;
-} */
-
-
-/* CSS untuk tampilan pada layar kecil */
-@media screen and (max-width: 576px) {
-  /* Mengatur posisi teks dan tombol di atas gambar */
-  .carousel-item h3,
-  .carousel-item h4,
-  .carousel-item a {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /* Mengatur jarak antara teks dan tombol dengan gambar */
-  .carousel-item h3,
-  .carousel-item h4 {
-    bottom: 70px;
-  }
-  
-  .carousel-item a {
-    bottom: 20px;
-  }
-  
-  /* Mengatur ukuran font pada teks */
-  .carousel-item h3 {
-    font-size: 1.5rem;
-  }
-  
-  .carousel-item h4 {
-    font-size: 1rem;
-  }
-  
-  /* Mengatur lebar gambar */
-  .carousel-item img {
-    width: 100%;
-  }
-  
-  /* Mengatur jarak antara indikator dengan gambar */
-  .carousel-indicators {
-    bottom: 10px;
-  }
 }
