@@ -7,7 +7,7 @@
         <!-- memanggil bootstrap.css -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <!-- judul halaman -->
-        <title>Contact Us</title>
+        <title>Final Project 1 Group 2</title>
         <!-- memanggil file style_contact.css untuk styling -->
         <link href="style_contact.css" rel="stylesheet">
     </head>
@@ -82,25 +82,25 @@
                     <!-- judul -->
                     <h1 class="text-center mb-3">Keluhan / Saran</h1>
                     <!-- teks -->
-                    <p>
+                    <p style="text-align:justify">
                         Kirimkan keluhan atau saran anda terhadap pelayanan toko kami. Kritik dan saran anda akan sangat membantu kami untuk mengembangkan toko ini agar lebih baik kedepannya.
                     </p>
                 </div>
                 <!-- isian form (sebelah kanan) -->
                 <div class="col-md-6">
                     <form class="px-5">
-                        <!-- input untuk email -->
+                        <!-- input untuk nama -->
                         <div class="mb-3">
-                            <label for="InputEmail" class="form-label">Alamat Email</label>
-                            <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
+                            <label for="InputNama" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="InputNama" name="nama">
                         </div>
                         <!-- input keluhan / saran -->
                         <div class="mb-3">
-                            <label for="konten" class="form-label">Kritik / Saran anda</label>
-                            <textarea class="form-control" id="konten" rows="4"></textarea>
+                            <label for="InputKonten" class="form-label">Kritik / Saran anda</label>
+                            <textarea class="form-control" id="InputKonten" rows="4" name="konten"></textarea>
                         </div>
                         <!-- tombol submit -->
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-primary" onclick="kirim()">Submit</button>
                     </form>
                 </div>
             </div>
