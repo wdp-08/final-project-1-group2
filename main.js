@@ -67,32 +67,39 @@ deleteButton.addEventListener('click', function() {
   resetStok();
 });
 
-// Mendapatkan elemen button dengan class 'btn-warning' dan data-id 'btn-edit-3'
-const editButton = document.querySelector('button.btn.btn-warning[data-id="btn-edit-1"]');
+// Mendapatkan elemen button dengan class 'btn-warning' dan data-id 'btn-edit-1'
+const editButton1 = document.querySelector('button.btn.btn-warning[data-id="btn-edit-1"]');
 
-// Mendapatkan elemen td dengan id 'stok-produk3'
-const stokProduk = document.querySelector('#stok-produk1');
+// Mendapatkan elemen td dengan id 'stok-produk1'
+const stokProduk1 = document.querySelector('#stok-produk1');
 
-// Mendapatkan elemen td dengan id 'harga-produk3'
-const hargaProduk = document.querySelector('#harga-produk1');
+// Mendapatkan elemen td dengan id 'harga-produk1'
+const hargaProduk1 = document.querySelector('#harga-produk1');
 
 // Menambahkan event listener pada tombol edit
-editButton.addEventListener('click', () => {
-  // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
-  const jumlahBeli = prompt('Masukkan jumlah produk yang ingin dibeli:');
+editButton1.addEventListener('click', () => {
+  // Cek apakah data produk sudah diisi atau belum
+  const namaProduk1 = document.querySelector('#nama-produk1').textContent;
+  if (namaProduk1 === '') {
+    alert('Silahkan pesan terlebih dahulu sebelum melakukan edit.');
+    return;
+  }
 
-  // Mengubah nilai pada elemen td dengan id 'stok-produk3' sesuai input pengguna
-  if (jumlahBeli !== null) {
-    const stokSekarang = stok1;
-    const jumlahBeliInt = parseInt(jumlahBeli);
-    if (jumlahBeliInt <= stokSekarang) {
-      stokProduk.textContent = jumlahBeliInt;
+  // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
+  const jumlahBeli1 = prompt('Masukkan jumlah produk yang ingin dibeli:');
+
+  // Mengubah nilai pada elemen td dengan id 'stok-produk1' sesuai input pengguna
+  if (jumlahBeli1 !== null) {
+    const stokSekarang1 = stok1;
+    const jumlahBeliInt1 = parseInt(jumlahBeli1);
+    if (jumlahBeliInt1 <= stokSekarang1) {
+      stokProduk1.textContent = jumlahBeliInt1;
 
       // Menghitung harga baru
-      const hargaBaru = harga_produk * jumlahBeliInt;
+      const hargaBaru1 = harga_produk * jumlahBeliInt1;
 
-      // Mengubah nilai pada elemen td dengan id 'harga-produk3' sesuai harga baru
-      hargaProduk.textContent = hargaBaru;
+      // Mengubah nilai pada elemen td dengan id 'harga-produk1' sesuai harga baru
+      hargaProduk1.textContent = hargaBaru1;
       resetStok();
       alert('Pengeditan berhasil.');
     } else {
@@ -100,13 +107,7 @@ editButton.addEventListener('click', () => {
     }
   }
 });
-
-
 // TUTUP CARD 1
-
-
-
-
 
 function beli2() {
   alert("Stok habis!");
@@ -179,6 +180,13 @@ const hargaProduk3 = document.querySelector('#harga-produk3');
 
 // Menambahkan event listener pada tombol edit
 editButton3.addEventListener('click', () => {
+  // Cek apakah data produk sudah diisi atau belum
+  const namaProduk3 = document.querySelector('#nama-produk3').textContent;
+  if (namaProduk3 === '') {
+    alert('Silahkan pesan terlebih dahulu sebelum melakukan edit.');
+    return;
+  }
+
   // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
   const jumlahBeli3 = prompt('Masukkan jumlah produk yang ingin dibeli:');
 
@@ -201,8 +209,6 @@ editButton3.addEventListener('click', () => {
     }
   }
 });
-
-
 // TUTUP CARD 3
 
 
@@ -263,40 +269,45 @@ deleteButton4.addEventListener('click', function() {
   resetStok4();
 });
 
-// Mendapatkan elemen button dengan class 'btn-warning' dan data-id 'btn-edit-4'
-const editButton4 = document.querySelector('button.btn.btn-warning[data-id="btn-edit-4"]');
+  // Mendapatkan elemen button dengan class 'btn-warning' dan data-id 'btn-edit-4'
+  const editButton4 = document.querySelector('button.btn.btn-warning[data-id="btn-edit-4"]');
 
-// Mendapatkan elemen td dengan id 'stok-produk4'
-const stokProduk4 = document.querySelector('#stok-produk4');
+  // Mendapatkan elemen td dengan id 'stok-produk4'
+  const stokProduk4 = document.querySelector('#stok-produk4');
 
-// Mendapatkan elemen td dengan id 'harga-produk4'
-const hargaProduk4 = document.querySelector('#harga-produk4');
+  // Mendapatkan elemen td dengan id 'harga-produk4'
+  const hargaProduk4 = document.querySelector('#harga-produk4');
 
-// Menambahkan event listener pada tombol edit
-editButton4.addEventListener('click', () => {
+  // Menambahkan event listener pada tombol edit
+  editButton4.addEventListener('click', () => {
+  // Cek apakah data produk sudah diisi atau belum
+  const namaProduk4 = document.querySelector('#nama-produk4').textContent;
+  if (namaProduk4 === '') {
+  alert('Silahkan pesan terlebih dahulu sebelum melakukan edit.');
+  return;
+  }
+
   // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
   const jumlahBeli4 = prompt('Masukkan jumlah produk yang ingin dibeli:');
 
   // Mengubah nilai pada elemen td dengan id 'stok-produk4' sesuai input pengguna
   if (jumlahBeli4 !== null) {
-    const stokSekarang4 = stok4;
-    const jumlahBeliInt4 = parseInt(jumlahBeli4);
-    if (jumlahBeliInt4 <= stokSekarang4) {
-      stokProduk4.textContent = jumlahBeliInt4;
+  const stokSekarang4 = stok4;
+  const jumlahBeliInt4 = parseInt(jumlahBeli4);
+  if (jumlahBeliInt4 <= stokSekarang4) {
+  stokProduk4.textContent = jumlahBeliInt4;
+    // Menghitung harga baru
+    const hargaBaru4 = harga_produk4 * jumlahBeliInt4;
 
-      // Menghitung harga baru
-      const hargaBaru4 = harga_produk4 * jumlahBeliInt4;
-
-      // Mengubah nilai pada elemen td dengan id 'harga-produk4' sesuai harga baru
-      hargaProduk4.textContent = hargaBaru4;
-      resetStok4();
-      alert('Pengeditan berhasil.');
-    } else {
-      alert('Mohon maaf, stok tidak cukup.');
+    // Mengubah nilai pada elemen td dengan id 'harga-produk4' sesuai harga baru
+    hargaProduk4.textContent = hargaBaru4;
+    resetStok4();
+    alert('Pengeditan berhasil.');
+  } else {
+    alert('Mohon maaf, stok tidak cukup.');
     }
   }
 });
-
 // TUTUP CARD 4
 
 
@@ -368,6 +379,13 @@ const hargaProduk5 = document.querySelector('#harga-produk5');
 
 // Menambahkan event listener pada tombol edit
 editButton5.addEventListener('click', () => {
+  // Cek apakah data produk sudah diisi atau belum
+  const namaProduk5 = document.querySelector('#nama-produk5').textContent;
+  if (namaProduk5 === '') {
+    alert('Silahkan pesan terlebih dahulu sebelum melakukan edit.');
+    return;
+  }
+
   // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
   const jumlahBeli5 = prompt('Masukkan jumlah produk yang ingin dibeli:');
 
@@ -390,7 +408,6 @@ editButton5.addEventListener('click', () => {
     }
   }
 });
-
 // TUTUP CARD 5
 
 
@@ -465,29 +482,36 @@ const hargaProduk6 = document.querySelector('#harga-produk6');
 
 // Menambahkan event listener pada tombol edit
 editButton6.addEventListener('click', () => {
-  // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
-  const jumlahBeli6 = prompt('Masukkan jumlah produk yang ingin dibeli:');
-
-  // Mengubah nilai pada elemen td dengan id 'stok-produk6' sesuai input pengguna
-  if (jumlahBeli6 !== null) {
-    const stokSekarang6 = stok6;
-    const jumlahBeliInt6 = parseInt(jumlahBeli6);
-    if (jumlahBeliInt6 <= stokSekarang6) {
-      stokProduk6.textContent = jumlahBeliInt6;
-
-      // Menghitung harga baru
-      const hargaBaru6 = harga_produk6 * jumlahBeliInt6;
-
-      // Mengubah nilai pada elemen td dengan id 'harga-produk6' sesuai harga baru
-      hargaProduk6.textContent = hargaBaru6;
-      resetStok6();
-      alert('Pengeditan berhasil.');
-    } else {
-      alert('Mohon maaf, stok tidak cukup.');
+  // Mendapatkan elemen td dengan id 'nama-produk6'
+  const namaProduk6 = document.querySelector('#nama-produk6');
+  
+  // Memeriksa apakah data sudah diisi
+  if (namaProduk6.textContent === '') {
+    alert('Silahkan pesan terlebih dahulu sebelum melakukan edit.');
+  } else {
+    // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
+    const jumlahBeli6 = prompt('Masukkan jumlah produk yang ingin dibeli:');
+  
+    // Mengubah nilai pada elemen td dengan id 'stok-produk6' sesuai input pengguna
+    if (jumlahBeli6 !== null) {
+      const stokSekarang6 = stok6;
+      const jumlahBeliInt6 = parseInt(jumlahBeli6);
+      if (jumlahBeliInt6 <= stokSekarang6) {
+        stokProduk6.textContent = jumlahBeliInt6;
+  
+        // Menghitung harga baru
+        const hargaBaru6 = harga_produk6 * jumlahBeliInt6;
+  
+        // Mengubah nilai pada elemen td dengan id 'harga-produk6' sesuai harga baru
+        hargaProduk6.textContent = hargaBaru6;
+        resetStok6();
+        alert('Pengeditan berhasil.');
+      } else {
+        alert('Mohon maaf, stok tidak cukup.');
+      }
     }
   }
 });
-
 // TUTUP CARD 6
 
 
