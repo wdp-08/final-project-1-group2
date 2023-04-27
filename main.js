@@ -10,6 +10,7 @@ beliBtns.forEach(function(beliBtn) {
 
 // memunculkan data card 1 kedalam table
 let stok = 2;
+let stok1 = 2;
 let stok_produk = 0;
 const harga_produk = 430000;
 
@@ -66,13 +67,13 @@ deleteButton.addEventListener('click', function() {
   resetStok();
 });
 
-// Mendapatkan elemen button dengan class 'btn-warning' dan data-id 'btn-edit-1'
+// Mendapatkan elemen button dengan class 'btn-warning' dan data-id 'btn-edit-3'
 const editButton = document.querySelector('button.btn.btn-warning[data-id="btn-edit-1"]');
 
-// Mendapatkan elemen td dengan id 'stok-produk1'
+// Mendapatkan elemen td dengan id 'stok-produk3'
 const stokProduk = document.querySelector('#stok-produk1');
 
-// Mendapatkan elemen td dengan id 'harga-produk1'
+// Mendapatkan elemen td dengan id 'harga-produk3'
 const hargaProduk = document.querySelector('#harga-produk1');
 
 // Menambahkan event listener pada tombol edit
@@ -80,17 +81,17 @@ editButton.addEventListener('click', () => {
   // Memunculkan pop-up dan meminta input jumlah produk yang ingin dibeli
   const jumlahBeli = prompt('Masukkan jumlah produk yang ingin dibeli:');
 
-  // Mengubah nilai pada elemen td dengan id 'stok-produk1' sesuai input pengguna
+  // Mengubah nilai pada elemen td dengan id 'stok-produk3' sesuai input pengguna
   if (jumlahBeli !== null) {
-    const stok = parseInt(stokProduk.textContent);
+    const stokSekarang = stok1;
     const jumlahBeliInt = parseInt(jumlahBeli);
-    if (jumlahBeliInt <= stok) {
+    if (jumlahBeliInt <= stokSekarang) {
       stokProduk.textContent = jumlahBeliInt;
 
       // Menghitung harga baru
       const hargaBaru = harga_produk * jumlahBeliInt;
 
-      // Mengubah nilai pada elemen td dengan id 'harga-produk1' sesuai harga baru
+      // Mengubah nilai pada elemen td dengan id 'harga-produk3' sesuai harga baru
       hargaProduk.textContent = hargaBaru;
       resetStok();
       alert('Pengeditan berhasil.');
@@ -99,6 +100,7 @@ editButton.addEventListener('click', () => {
     }
   }
 });
+
 
 // TUTUP CARD 1
 
@@ -182,7 +184,7 @@ editButton3.addEventListener('click', () => {
 
   // Mengubah nilai pada elemen td dengan id 'stok-produk3' sesuai input pengguna
   if (jumlahBeli3 !== null) {
-    const stokSekarang3 = parseInt(stokProduk3.textContent);
+    const stokSekarang3 = stok3;
     const jumlahBeliInt3 = parseInt(jumlahBeli3);
     if (jumlahBeliInt3 <= stokSekarang3) {
       stokProduk3.textContent = jumlahBeliInt3;
@@ -192,7 +194,7 @@ editButton3.addEventListener('click', () => {
 
       // Mengubah nilai pada elemen td dengan id 'harga-produk3' sesuai harga baru
       hargaProduk3.textContent = hargaBaru3;
-
+      resetStok3();
       alert('Pengeditan berhasil.');
     } else {
       alert('Mohon maaf, stok tidak cukup.');
@@ -277,7 +279,7 @@ editButton4.addEventListener('click', () => {
 
   // Mengubah nilai pada elemen td dengan id 'stok-produk4' sesuai input pengguna
   if (jumlahBeli4 !== null) {
-    const stokSekarang4 = parseInt(stokProduk4.textContent);
+    const stokSekarang4 = stok4;
     const jumlahBeliInt4 = parseInt(jumlahBeli4);
     if (jumlahBeliInt4 <= stokSekarang4) {
       stokProduk4.textContent = jumlahBeliInt4;
@@ -287,7 +289,7 @@ editButton4.addEventListener('click', () => {
 
       // Mengubah nilai pada elemen td dengan id 'harga-produk4' sesuai harga baru
       hargaProduk4.textContent = hargaBaru4;
-
+      resetStok4();
       alert('Pengeditan berhasil.');
     } else {
       alert('Mohon maaf, stok tidak cukup.');
@@ -371,7 +373,7 @@ editButton5.addEventListener('click', () => {
 
   // Mengubah nilai pada elemen td dengan id 'stok-produk5' sesuai input pengguna
   if (jumlahBeli5 !== null) {
-    const stokSekarang5 = parseInt(stokProduk5.textContent);
+    const stokSekarang5 = stok5;
     const jumlahBeliInt5 = parseInt(jumlahBeli5);
     if (jumlahBeliInt5 <= stokSekarang5) {
       stokProduk5.textContent = jumlahBeliInt5;
@@ -381,7 +383,7 @@ editButton5.addEventListener('click', () => {
 
       // Mengubah nilai pada elemen td dengan id 'harga-produk5' sesuai harga baru
       hargaProduk5.textContent = hargaBaru5;
-
+      resetStok5();
       alert('Pengeditan berhasil.');
     } else {
       alert('Mohon maaf, stok tidak cukup.');
@@ -468,7 +470,7 @@ editButton6.addEventListener('click', () => {
 
   // Mengubah nilai pada elemen td dengan id 'stok-produk6' sesuai input pengguna
   if (jumlahBeli6 !== null) {
-    const stokSekarang6 = parseInt(stokProduk6.textContent);
+    const stokSekarang6 = stok6;
     const jumlahBeliInt6 = parseInt(jumlahBeli6);
     if (jumlahBeliInt6 <= stokSekarang6) {
       stokProduk6.textContent = jumlahBeliInt6;
@@ -478,7 +480,7 @@ editButton6.addEventListener('click', () => {
 
       // Mengubah nilai pada elemen td dengan id 'harga-produk6' sesuai harga baru
       hargaProduk6.textContent = hargaBaru6;
-
+      resetStok6();
       alert('Pengeditan berhasil.');
     } else {
       alert('Mohon maaf, stok tidak cukup.');
