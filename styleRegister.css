@@ -1,0 +1,32 @@
+body{
+	background-color: #F6F7FB;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	color: #2D2D2D;
+}
+.form-container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 30px 100px;
+	box-shadow: 3px 3px 10px 0px #000;
+	border-radius: 10px;
+	width: 70vw;
+	height: 550px;
+	background-color: #FFFFFF;
+}
+.text-judul{
+	font-weight: bold;
+	font-size: 30px;
+}
+.form-control{
+	font-size: 12px;
+}
+.text-login{
+	text-decoration: none;
+}
+.text-merah{
+	color: red;
+	font-weight: bold;
+}
