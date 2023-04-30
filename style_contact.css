@@ -1,0 +1,54 @@
+/* style untuk bagian body */
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* style untuk animasi kontak */
+.animate {
+  transform: scale(0.1);
+  transition: transform 1s ease;
+}
+.animate.show {
+  transform: scale(1);
+}
+
+/* CSS untuk navigasi */
+.navbar {
+  position: relative;
+  box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+}
+
+.active-link{
+  font-weight: bold;
+  color: #012d80 !important;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.navbar-nav {
+  margin-right: 100px;
+}
+
+.nav-link {
+  color: #1b55c0 !important;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: #012d80;
+}
+
+/* CSS untuk menu toggle */
+.navbar-toggler-icon {
+  color: #fff;
+}
