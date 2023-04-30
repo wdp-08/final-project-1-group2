@@ -6,12 +6,12 @@
 
 /* CSS untuk navigasi */
 .navbar {
-  position: relative;
   box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
 }
 
 .active-link{
-  color: #012d80;
+  font-weight: bold;
+  color: #012d80 !important;
 }
 
 .navbar-brand {
@@ -25,11 +25,11 @@
 }
 
 .navbar-nav {
-  margin-right: 30px;
+  margin-right: 100px;
 }
 
 .nav-link {
-  color: #fff;
+  color: #1b55c0 !important;
   font-size: 1.2rem;
 }
 
@@ -37,18 +37,18 @@
   color: #012d80;
 }
 
-/* Ikon dark mode */
-.change-theme{
-  padding: 10px;
-  font-size: 1.6rem;
-  cursor: pointer;
+/* CSS untuk menu toggle */
+.navbar-toggler-icon {
+  color: #fff;
 }
-/* Tutup Ikon dark mode */
+
+h3{
+  color: #012d80;
+}
 
 .jumbotron {
   padding-top: 3rem;
   background-color: #0d6efd;
-  margin-top: 50px;
 }
 
 /* menyembuyikan keranjang */
