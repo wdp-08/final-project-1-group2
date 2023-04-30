@@ -1,0 +1,59 @@
+/* style untuk body */
+body {
+  overflow-x: hidden;
+}
+
+/* style animasi untuk class 'section' */
+.section {
+  transform: translateX(400%);
+  transition: transform 1s ease;
+}
+.section:nth-of-type(even){
+  transform: translateX(-400%);
+}
+.section.show {
+  transform: translateX(0%);
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+/* CSS untuk navigasi */
+.navbar {
+  position: relative;
+  box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+}
+
+.active-link{
+  font-weight: bold;
+  color: #012d80 !important;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.navbar-nav {
+  margin-right: 100px;
+}
+
+.nav-link {
+  color: #1b55c0 !important;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: #012d80;
+}
+
+/* CSS untuk menu toggle */
+.navbar-toggler-icon {
+  color: #fff;
+}
