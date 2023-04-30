@@ -21,7 +21,6 @@ body {
 
 /* CSS untuk navigasi */
 .navbar {
-  position: relative;
   box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
 }
 
