@@ -1,0 +1,57 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS untuk navigasi */
+.navbar {
+  position: relative;
+  box-shadow: 3px 10px 25px -19px rgba(0, 0, 0, 0.75);
+}
+
+.active-link{
+  color: #012d80;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.navbar-nav {
+  margin-right: 30px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: #012d80;
+}
+
+/* Ikon dark mode */
+.change-theme{
+  padding: 10px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+/* Tutup Ikon dark mode */
+
+.jumbotron {
+  padding-top: 3rem;
+  background-color: #0d6efd;
+  margin-top: 50px;
+}
+
+/* menyembuyikan keranjang */
+.container {
+  display: none;
+}
