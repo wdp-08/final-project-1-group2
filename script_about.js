@@ -1,0 +1,99 @@
+// animasi untuk class section 
+const section = document.querySelectorAll('.section');
+// menambahkan listener yaitu action animasi akan dilakukan ketika ada action scroll dari user
+window.addEventListener('scroll',moveSect);
+
+moveSect();
+
+// fungsi untuk menambahkan class 'show' sehingga konten akan ditampilkan dengan animasi / transform 
+function moveSect(){
+    const triggerBottom = window.innerHeight / 5 * 4;
+    section.forEach(sect =>{
+        const sectTop = sect.getBoundingClientRect().top;
+        if(sectTop < triggerBottom){
+            sect.classList.add('show');
+        } else {
+            sect.classList.remove('show');
+        }
+    })
+}
+
+/*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2023 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
+
+(() => {
+    'use strict'
+  
+    const storedTheme = localStorage.getItem('theme')
+  
+    const getPreferredTheme = () => {
+      if (storedTheme) {
+        return storedTheme
+      }
+  
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+  
+    const setTheme = function (theme) {
+      if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark')
+      } else {
+        document.documentElement.setAttribute('data-bs-theme', theme)
+      }
+    }
+  
+    setTheme(getPreferredTheme())
+  
+    const showActiveTheme = (theme, focus = false) => {
+      const themeSwitcher = document.querySelector('#bd-theme')
+  
+      if (!themeSwitcher) {
+        return
+      }
+  
+      const themeSwitcherText = document.querySelector('#bd-theme-text')
+      const activeThemeIcon = document.querySelector('.theme-icon-active')
+      const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+      const iconOfActiveBtn = btnToActive.querySelector('i').dataset.themeIcon
+  
+      document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+        element.classList.remove('active')
+        element.setAttribute('aria-pressed', 'false')
+      })
+  
+      btnToActive.classList.add('active')
+      btnToActive.setAttribute('aria-pressed', 'true')
+      activeThemeIcon.classList.remove(activeThemeIcon.dataset.themeIconActive)
+      activeThemeIcon.classList.add(iconOfActiveBtn)
+      activeThemeIcon.dataset.iconActive = iconOfActiveBtn
+      const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+      themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+  
+      if (focus) {
+        themeSwitcher.focus()
+      }
+    }
+  
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      if (storedTheme !== 'light' || storedTheme !== 'dark') {
+        setTheme(getPreferredTheme())
+      }
+    })
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      showActiveTheme(getPreferredTheme())
+  
+      document.querySelectorAll('[data-bs-theme-value]')
+        .forEach(toggle => {
+          toggle.addEventListener('click', () => {
+            const theme = toggle.getAttribute('data-bs-theme-value')
+            localStorage.setItem('theme', theme)
+            setTheme(theme)
+            showActiveTheme(theme, true)
+          })
+        })
+    })
+  })()
